@@ -4,62 +4,79 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: auto; /* Permite el desplazamiento si el contenido es más grande que la pantalla */
 
 }
 
 
 .navbar {
-    background-color: rgba(177, 0, 0, 0.8); /* Color rosa */
+    background-color: rgb(43, 43, 43); /* Color rosa */
     padding: 10px 20px; /* Espaciado interno de la barra de navegación */
     display: flex;
+    justify-content: initial;
 }
+
+.logo-nav img{
+    position: absolute;
+    height: 35px;
+    top: 5px;
+    left: 15px;
+}
+
+
 
 /* Estilo de los enlaces en la barra de navegación */
 .nav-links {
     list-style: none; /* Elimina los puntos de la lista */
     padding: 0;
     margin: 0;
+    margin-left: 30px;
     display: flex;
+    
     
 }
 
 /* Estilo de los elementos de la lista */
 .nav-links li {
-    margin: 0 50px; /* Espaciado entre los elementos de la lista */
+    margin: 0 40px; /* Espaciado entre los elementos de la lista */
 }
 
 /* Estilo de los enlaces */
 .nav-links a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     color: white; /* Color del texto */
-    font-size: 20px; /* Tamaño de la fuente */
+    font-size: 18px; /* Tamaño de la fuente */
     font-weight: bold; /* Negrita */
+    font-family: "Archivo Black", sans-serif;
 }
 
 /* Estilo para cambiar el color de los enlaces al pasar el ratón */
 .nav-links a:hover {
-    color: #ff9900; /* Color rosa más oscuro para el hover */
+    background-color: #ff1493;
+    padding: 10px;
+}
+
+form {
+    position: absolute;
+    right: 150px;
+    
 }
 
 
 .social-icons {
-    display: flex;
-    align-items: center;
+    position: absolute;
+    z-index: 1;
+    right: 17px;
+    top: 4px;
+    background-color: #ff1493;
+    padding: 5px;
+
 }
 
 /* Estilo para cada ícono de red social */
 .social-icon {
-    color: white; /* Color de los íconos */
-    font-size: 20px; /* Tamaño de los íconos */
-    margin-left: 15px; /* Espaciado entre los íconos */
-    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    margin-left: 5px; /* Espaciado entre los íconos */
 }
 
-/* Estilo para cambiar el color de los íconos al pasar el ratón */
-.social-icon:hover {
-    color: #ff1493; /* Color rosa más oscuro para el hover */
-}
 
 
 
@@ -83,6 +100,33 @@ body, html {
     object-fit: cover; /* Ajusta las imágenes para que cubran todo el área sin distorsionar */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media query para pantallas con ancho menor o igual a 800px */
 @media (max-width: 800px) {
     .grid-container {
@@ -90,7 +134,45 @@ body, html {
         grid-template-rows: repeat(5, 400px); /* 5 filas con altura fija de 300px */
         width: calc(100% - 60px); /* Ajusta el ancho para tener en cuenta el espaciado horizontal */
     }
+
+    form {
+        display: none;
+    }
+
+    .logo-nav-mov{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-color: rgb(32, 32, 32);
+    }
+    .logo-nav-mov img{
+        margin: 10px;
+        height: 90px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 500px) {
+    .logo-nav-mov {
+        display: none;
+    }
+}
+
 
 /* Media query para pantallas con ancho menor o igual a 500px */
 @media (max-width: 500px) {
@@ -102,16 +184,36 @@ body, html {
     }
 
     .nav-links li {
-        margin: 0 35px; /* Espaciado entre los elementos de la lista */
+        margin: 0 20px; /* Espaciado entre los elementos de la lista */
+        margin-left: 0px;
+        margin-top: 0px;
     }
 
-    .navbar {
-        background-color: rgba(177, 0, 0, 0.8); /* Color rosa */
-        padding: 10px 20px; /* Espaciado interno de la barra de navegación */
+    .navbar { 
         display: flex;
         justify-content: center; /* Centra los elementos horizontalmente */
     }
+
+    .logo-nav{
+        display: none;
+    }
+
+
+    .social-icons {
+        display: none;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .grid-item {
     position: relative; /* Posiciona el contenedor de la imagen y el texto de manera relativa */
@@ -123,7 +225,7 @@ body, html {
     position: absolute; /* Posiciona el texto de manera absoluta sobre la imagen */
     bottom: 10px; /* Espaciado desde el borde inferior */
     color: white; /* Color del texto */
-    background-color: rgba(177, 0, 0, 0.8); /* Fondo semi-transparente para el texto */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para el texto */
     border-radius: 5px; /* Bordes redondeados del fondo */
     font-size: 20px; /* Tamaño de la fuente */
     width: 100%;
