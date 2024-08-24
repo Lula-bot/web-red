@@ -110,6 +110,40 @@ form {
 
 
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.inicio-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
+    gap: 10px; /* Espacio entre imágenes */
+    width: 80%; /* Ajusta según sea necesario */
+}
+
+.inicio-grid img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
