@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-size: 16px; /* Tamaño base */
 
 }
 
@@ -18,7 +19,7 @@ body, html {
 .logo-nav img{
     position: absolute;
     height: 35px;
-    top: 5px;
+    top: 3px;
     left: 15px;
 }
 
@@ -66,7 +67,7 @@ form {
     position: absolute;
     z-index: 1;
     right: 17px;
-    top: 4px;
+    top: 2px;
     background-color: #ff1493;
     padding: 5px;
 
@@ -113,7 +114,6 @@ form {
 body {
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -177,13 +177,17 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px;
+        margin: 0px;
         background-color: rgb(32, 32, 32);
     }
     .logo-nav-mov img{
         margin: 10px;
         height: 90px;
     }
+
+
+
+
 }
 
 
@@ -236,6 +240,20 @@ body {
     .social-icons {
         display: none;
     }
+
+    .btn-jujutsu-container {
+        position: absolute;
+        top: 450px;
+        width: 100%;
+        
+    }
+
+    .btn {
+        position: absolute; 
+        top: 10;
+        right: 0;
+        left: 0;
+    }
 }
 
 
@@ -270,4 +288,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.wallsukuna {
+    margin-top: -15px;
+    width: 100%;
+}
+
+
+.btn-jujutsu-container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100px);
+    
+}
+
+.btn {
+    background-color: #ff0080; /* Color rosa */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno (padding) */
+    font-size: 25px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra negra */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.btn:hover {
+    background-color: #ffd000; /* Color rosa más oscuro al pasar el ratón */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el ratón */
 }
