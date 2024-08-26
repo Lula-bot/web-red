@@ -14,6 +14,8 @@ body, html {
     padding: 10px 20px; /* Espaciado interno de la barra de navegación */
     display: flex;
     justify-content: initial;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+    
 }
 
 .logo-nav img{
@@ -21,6 +23,7 @@ body, html {
     height: 35px;
     top: 3px;
     left: 15px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); 
 }
 
 
@@ -32,6 +35,7 @@ body, html {
     margin: 0;
     margin-left: 30px;
     display: flex;
+    width: 100vw;
     
     
 }
@@ -48,6 +52,7 @@ body, html {
     font-size: 18px; /* Tamaño de la fuente */
     font-weight: bold; /* Negrita */
     font-family: "Archivo Black", sans-serif;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0); 
 }
 
 /* Estilo para cambiar el color de los enlaces al pasar el ratón */
@@ -62,14 +67,19 @@ form {
     
 }
 
+.btn-buscador {
+    background-color: #ff0080;
+    color: #f0f0f0;
+}
+
 
 .social-icons {
     position: absolute;
     z-index: 1;
     right: 17px;
     top: 2px;
-    background-color: #ff1493;
     padding: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -185,6 +195,9 @@ body {
         height: 90px;
     }
 
+    .image-grid2 img {
+        width: 100%; /* En pantallas pequeñas, las imágenes ocupan el 100% del ancho del contenedor */
+    }
 
 
 
@@ -203,12 +216,21 @@ body {
 
 
 
-
+@media (max-width: 1129px) {
+    form  {
+        display: none;
+    }
+    .img-nosotros-container img {
+        display: none;
+    }
+}
 
 @media (min-width: 500px) {
     .logo-nav-mov {
         display: none;
     }
+
+
 }
 
 
@@ -254,6 +276,14 @@ body {
         right: 0;
         left: 0;
     }
+
+    .image-grid2{
+        margin-top: 150px;
+    }
+
+
+
+
 }
 
 
@@ -322,3 +352,110 @@ body {
     background-color: #ffd000; /* Color rosa más oscuro al pasar el ratón */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el ratón */
 }
+
+
+
+.nosotros-tittle {
+    background-color: #2c2c2c;
+    width: 100vw;
+    margin-top: 90px;
+}
+
+.nosotros-tittle P {
+    color:#ffffff;
+    font-size: 60px;
+    padding: 10px;
+    margin-left: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+
+}
+
+
+.container-nosotros{
+    display: flex;
+    margin-top: -40px;
+    background-color: white;
+}
+
+
+.nosotros-txt p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+}
+
+
+.img-nosotros-container img {
+    height: 550px;
+    margin-right: 80px;
+    margin-top: 15px;
+}
+
+
+
+
+.image-grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Espacio entre las imágenes */
+}
+
+.image-item {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    overflow: hidden; /* Asegura que el overlay no se desborde */
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    color: #fff;
+    opacity: 0; /* Oculto por defecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay {
+    opacity: 1; /* Muestra el overlay al pasar el mouse */
+}
+
+.overlay .text {
+    padding: 20px;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.overlay p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
