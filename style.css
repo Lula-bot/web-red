@@ -195,6 +195,7 @@ body {
     .logo-nav-mov img{
         margin: 10px;
         height: 90px;
+        margin-top: 50px;
     }
 
     .image-grid2 img {
@@ -377,7 +378,8 @@ body {
 .container-nosotros{
     display: flex;
     margin-top: -40px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    
 }
 
 
@@ -386,6 +388,7 @@ body {
     margin-right: 20px;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 18px;
+    
 }
 
 
@@ -403,6 +406,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px; /* Espacio entre las imágenes */
+    margin-top: 50px;
 }
 
 .image-item {
@@ -410,6 +414,7 @@ body {
     width: 300px;
     height: 400px;
     overflow: hidden; /* Asegura que el overlay no se desborde */
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
 }
 
 .image-item img {
@@ -433,6 +438,7 @@ body {
     justify-content: center;
     text-align: center;
     transition: opacity 0.3s ease;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
 }
 
 .image-item:hover .overlay {
@@ -456,6 +462,7 @@ body {
 footer {
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 
@@ -588,4 +595,29 @@ h1 {
 
 .movie div {
     color: #ff85c2;
+}
+
+
+
+/*comunidad*/
+
+.section-normas {
+    display: flex;
+    margin-top: 100px;
+    background-image: url(img/gojo.jpg);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+}
+
+
+.container-normas {
+    color: white;
+    background-color: #242424;
+    font-size: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 40px;
+    padding: 20px;
+    width: 500px;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+
 }
